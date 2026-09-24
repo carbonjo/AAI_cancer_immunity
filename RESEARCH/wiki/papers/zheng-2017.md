@@ -12,4 +12,4 @@ sources:
     title: Starter reading
 ---
 
-Bibliographic stub. Related: [scrna-seq](../concepts/scrna-seq.md).
+Bibliographic stub. Starter-list note: droplet / 10x-style conceptual workflow. Companion: [Luecken & Theis 2019](luecken-theis-2019.md). Related: [scrna-seq](../concepts/scrna-seq.md).

@@ -12,4 +12,4 @@ sources:
     title: Starter reading
 ---
 
-Bibliographic stub. Related: [cancer-immunity](../concepts/cancer-immunity.md), [cycle-can-break-at-any-step](../claims/cycle-can-break-at-any-step.md).
+Bibliographic stub. Companion on the starter list: [Sharma & Allison 2015](sharma-allison-2015.md). Related: [cancer-immunity](../concepts/cancer-immunity.md), [cycle-can-break-at-any-step](../claims/cycle-can-break-at-any-step.md).

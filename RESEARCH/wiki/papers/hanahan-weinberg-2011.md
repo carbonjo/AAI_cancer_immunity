@@ -12,4 +12,4 @@ sources:
     title: Starter reading
 ---
 
-Bibliographic stub. Related: [cancer-cell-biology](../concepts/cancer-cell-biology.md), [hallmarks-are-a-map](../claims/hallmarks-are-a-map.md).
+Bibliographic stub. Tutorial core stays here; [Hanahan 2022](hanahan-2022.md) is the optional extension. [GeoTyper](wolfe-2022-geotyper.md) cites this paper for immune-system evasion as a hallmark. Related: [cancer-cell-biology](../concepts/cancer-cell-biology.md), [hallmarks-are-a-map](../claims/hallmarks-are-a-map.md).

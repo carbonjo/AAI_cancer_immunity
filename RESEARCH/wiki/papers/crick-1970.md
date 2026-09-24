@@ -12,6 +12,4 @@ sources:
     title: Starter reading
 ---
 
-Bibliographic stub from the starter list. Not a substitute for reading the paper.
-
-Related: [information-flow](../concepts/information-flow.md).
+Bibliographic stub from the starter list. Not a substitute for reading the paper. Companion spine: [Alberts](alberts-molbiol-cell.md). Related: [information-flow](../concepts/information-flow.md), [rna-is-incomplete-readout](../claims/rna-is-incomplete-readout.md).
