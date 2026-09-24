@@ -2,7 +2,9 @@
 
 Research workspace for students **David Graham** and **Dominic Sciarrino**, SME **Dr. John Krolewski**, and technical advisor **Dr. Joaquin Carbonara**.
 
-The public interactive tutorial lives in **[cancer_immunity/](cancer_immunity/)** as its own GitHub repository: https://github.com/carbonjo/cancer_immunity
+**This folder:** https://github.com/carbonjo/AAI_cancer_immunity
+
+The interactive tutorial also lives in **[cancer_immunity/](cancer_immunity/)** and has its own repo: https://github.com/carbonjo/cancer_immunity
 
 ## Folder map
 
