@@ -37,6 +37,8 @@ Details: [people.md](people.md). Topic map: [topics.md](topics.md).
 | Why the four topics are sequenced this way | `docs/learning-goals.md` |
 | Meeting notes | `docs/meetings/` (copy `template.md`) |
 | Working notes | `notes/` |
+| Compiled research wiki (OKF / LLM-wiki) | `RESEARCH/wiki/index.md` |
+| Wiki schema (ingest / query / lint) | `RESEARCH/AGENTS.md` |
 | Landmark readings | `references/starter-reading.md` |
 | Lesson and quiz content | `cancer_immunity/content/lessons.py` |
 | App routes and OpenAI tutor | `cancer_immunity/app.py` |

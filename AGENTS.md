@@ -17,4 +17,4 @@ Read [`.cursor/skills/aai-cancer-immunity/SKILL.md`](.cursor/skills/aai-cancer-i
 - Do not invent affiliations, datasets, grants, or citations.
 - Never commit `.env`, API keys, or patient-level data.
 - Tutorial HTML must stay WCAG 2.1 AA: `lang` on `<html>`, one `h1`, heading order, underlined links, contrast, captions on data tables.
-- The interactive tutorial is the public GitHub artifact in `cancer_immunity/`. Research notes in `notes/` and `docs/` may stay local unless the team agrees to publish them.
+- The interactive tutorial is the public GitHub artifact in `cancer_immunity/`. Compiled research memory is `RESEARCH/` (LLM-wiki / OKF). Research notes in `notes/` and `docs/` may stay local unless the team agrees to publish them.

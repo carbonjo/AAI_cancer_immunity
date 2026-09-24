@@ -11,6 +11,7 @@ The interactive tutorial also lives in **[cancer_immunity/](cancer_immunity/)** 
 | Path | What it is |
 | --- | --- |
 | [cancer_immunity/](cancer_immunity/) | Flask + Docker + OpenAI tutorial (GitHub repo) |
+| [RESEARCH/](RESEARCH/) | Karpathy LLM-wiki compiled as an OKF v0.2 knowledge base |
 | [docs/](docs/) | Team, learning goals, meeting notes |
 | [notes/](notes/) | Student research drafts |
 | [references/](references/) | Starter reading |
