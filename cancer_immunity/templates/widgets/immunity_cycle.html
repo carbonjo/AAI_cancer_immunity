@@ -1,0 +1,17 @@
+<section class="widget" aria-labelledby="cycle-heading">
+  <h2 id="cycle-heading">Interactive figure: the cancer-immunity cycle</h2>
+  <p>Select a step (Chen and Mellman, 2013). For each step, ask how a real tumor could fail there.</p>
+  <ol class="cycle" id="cycleList">
+    <li><button type="button" class="cycle-step is-active" data-step="antigen" aria-pressed="true">1. Release of tumor antigens</button></li>
+    <li><button type="button" class="cycle-step" data-step="presentation" aria-pressed="false">2. Antigen presentation</button></li>
+    <li><button type="button" class="cycle-step" data-step="priming" aria-pressed="false">3. Priming and activation</button></li>
+    <li><button type="button" class="cycle-step" data-step="traffic" aria-pressed="false">4. T-cell trafficking</button></li>
+    <li><button type="button" class="cycle-step" data-step="infiltrate" aria-pressed="false">5. Infiltration into tumor</button></li>
+    <li><button type="button" class="cycle-step" data-step="recognize" aria-pressed="false">6. Recognition of cancer cells</button></li>
+    <li><button type="button" class="cycle-step" data-step="kill" aria-pressed="false">7. Killing and more antigen</button></li>
+  </ol>
+  <div id="cyclePanel" class="widget-panel" aria-live="polite">
+    <h3>1. Release of tumor antigens</h3>
+    <p>Dying or stressed tumor cells can release proteins that become peptide antigens. If a clone is poorly antigenic, later steps never start. scRNA-seq does not measure peptides; it can only hint at antigen-processing transcripts.</p>
+  </div>
+</section>

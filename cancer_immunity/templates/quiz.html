@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Quiz: {{ module.title }}{% endblock %}
+{% block content %}
+  <article class="quiz" data-module-id="{{ module.id }}">
+    <p class="eyebrow">Checkpoint · Module {{ module.order }}</p>
+    <h1>Quiz: {{ module.title }}</h1>
+    <p>Choose one answer for each question. Scoring does not require an OpenAI key. After you submit, explanations appear under each item.</p>
+
+    <form id="quizForm">
+      {% for item in module.quiz %}
+        <fieldset class="quiz-item" data-question-id="{{ item.id }}">
+          <legend>{{ loop.index }}. {{ item.prompt }}</legend>
+          {% for choice in item.choices %}
+            <label class="choice">
+              <input type="radio" name="{{ item.id }}" value="{{ loop.index0 }}" required>
+              <span>{{ choice }}</span>
+            </label>
+          {% endfor %}
+          <p class="quiz-feedback" hidden></p>
+        </fieldset>
+      {% endfor %}
+      <button type="submit">Score this quiz</button>
+    </form>
+    <p id="quizSummary" class="quiz-summary" aria-live="polite"></p>
+    <p><a href="{{ url_for('learn', module_id=module.id) }}">Back to the module</a></p>
+  </article>
+{% endblock %}

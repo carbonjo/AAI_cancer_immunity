@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}AAI Cancer Immunity — interactive tutorial{% endblock %}
+{% block content %}
+  <article class="hero">
+    <p class="eyebrow">Four modules, one argument</p>
+    <h1>Information flow, single-cell RNA, cancer biology, and cancer immunity</h1>
+    <p class="lede">
+      A cell’s state is an information-processing program. Single-cell RNA sequencing reads a noisy
+      projection of that program. Cancer corrupts the program and its niche. Immunity is the
+      recognition system that can clear, ignore, or be blocked by that niche.
+    </p>
+    <form class="learner-form" id="learnerForm">
+      <label for="learnerName">Your name (saved only in this browser and optional server progress)</label>
+      <div class="learner-row">
+        <input id="learnerName" name="learnerName" autocomplete="name" required placeholder="David Graham or Dominic Sciarrino">
+        <button type="submit">Save name</button>
+      </div>
+      <p class="form-status" id="learnerStatus" aria-live="polite"></p>
+    </form>
+  </article>
+
+  <section aria-labelledby="path-heading">
+    <h2 id="path-heading">Learning path</h2>
+    <ol class="module-cards">
+      {% for item in modules %}
+        <li>
+          <article class="module-card">
+            <p class="eyebrow">Module {{ item.order }} · about {{ item.minutes }} min</p>
+            <h3>
+              <a href="{{ url_for('learn', module_id=item.id) }}">{{ item.title }}</a>
+            </h3>
+            <p>{{ item.blurb }}</p>
+            <p>
+              <a href="{{ url_for('learn', module_id=item.id) }}">Open module {{ item.order }}</a>
+              ·
+              <a href="{{ url_for('quiz', module_id=item.id) }}">Checkpoint quiz ({{ item.quiz_length }} questions)</a>
+            </p>
+          </article>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section aria-labelledby="how-heading">
+    <h2 id="how-heading">How to use this tutorial</h2>
+    <ol>
+      <li>Read a module in order. Use the interactive figure until you can explain it out loud.</li>
+      <li>Take the checkpoint quiz. Answers are scored on the server; you do not need an API key.</li>
+      <li>Ask the AI tutor to rephrase a mechanism. Treat its replies as study aids, not as sign-off from {{ team.sme }}.</li>
+      <li>Carry questions into research notes in this repository. Disease-specific claims wait for the SME; app and methods questions go to {{ team.advisor }}.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="team-heading">
+    <h2 id="team-heading">People on this project</h2>
+    <table>
+      <caption>Roles for the AAI cancer immunity workspace</caption>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>David Graham</td>
+          <td>Student</td>
+        </tr>
+        <tr>
+          <td>Dominic Sciarrino</td>
+          <td>Student</td>
+        </tr>
+        <tr>
+          <td>Dr. John Krolewski</td>
+          <td>Subject-matter expert</td>
+        </tr>
+        <tr>
+          <td>Dr. Joaquin Carbonara</td>
+          <td>Technical advisor</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Module {{ module.order }}: {{ module.title }}{% endblock %}
+{% block description %}{{ module.blurb }}{% endblock %}
+{% block content %}
+  <article class="lesson" data-module-id="{{ module.id }}">
+    <header class="lesson-header">
+      <p class="eyebrow">Module {{ module.order }} of 4 · about {{ module.minutes }} minutes</p>
+      <h1>{{ module.title }}</h1>
+      <p class="lede">{{ module.blurb }}</p>
+    </header>
+
+    <section aria-labelledby="objectives-heading">
+      <h2 id="objectives-heading">What you should be able to do</h2>
+      <ul>
+        {% for item in module.objectives %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    {% if module.widget == "central_dogma" %}
+      {% include "widgets/central_dogma.html" %}
+    {% elif module.widget == "umi_heatmap" %}
+      {% include "widgets/umi_heatmap.html" %}
+    {% elif module.widget == "hallmarks" %}
+      {% include "widgets/hallmarks.html" %}
+    {% elif module.widget == "immunity_cycle" %}
+      {% include "widgets/immunity_cycle.html" %}
+    {% endif %}
+
+    {% for section in module.sections %}
+      <section aria-labelledby="sec-{{ loop.index }}">
+        <h2 id="sec-{{ loop.index }}">{{ section.title }}</h2>
+        {% for paragraph in section.paragraphs %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+        {% if section.bullets %}
+          <ul>
+            {% for bullet in section.bullets %}
+              <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if section.callout %}
+          <aside class="callout" aria-label="{{ section.callout.label }}">
+            <p class="callout-label">{{ section.callout.label }}</p>
+            <p>{{ section.callout.text }}</p>
+          </aside>
+        {% endif %}
+      </section>
+    {% endfor %}
+
+    <nav class="lesson-pager" aria-label="Module sequence">
+      <p>
+        {% if previous_mod %}
+          <a href="{{ url_for('learn', module_id=previous_mod.id) }}">Previous: {{ previous_mod.title }}</a>
+        {% endif %}
+        <a href="{{ url_for('quiz', module_id=module.id) }}">Checkpoint quiz for this module</a>
+        {% if next_mod %}
+          <a href="{{ url_for('learn', module_id=next_mod.id) }}">Next: {{ next_mod.title }}</a>
+        {% endif %}
+      </p>
+    </nav>
+
+    <section class="tutor" aria-labelledby="tutor-heading">
+      <h2 id="tutor-heading">Ask the AI tutor</h2>
+      <p>
+        The tutor uses your OpenAI key and stays inside these four topics. It is not {{ team.sme }}
+        and it is not medical advice.
+      </p>
+      <form id="tutorForm">
+        <label for="tutorMessage">Your question</label>
+        <textarea id="tutorMessage" name="tutorMessage" rows="4" required maxlength="4000" placeholder="Example: Why is phosphorylation invisible to scRNA-seq?"></textarea>
+        <button type="submit"{% if not tutor_ready %} disabled{% endif %}>Ask tutor</button>
+      </form>
+      <div id="tutorLog" class="tutor-log" aria-live="polite"></div>
+    </section>
+  </article>
+{% endblock %}

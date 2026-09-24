@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}AAI Cancer Immunity tutorial{% endblock %}</title>
+    <meta name="description" content="{% block description %}Interactive tutorial on information flow in the cell, single-cell RNA sequencing, cancer cell biology, and cancer immunity.{% endblock %}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <p class="eyebrow">
+          <a href="{{ url_for('home') }}">AAI Cancer Immunity</a>
+        </p>
+        <p class="header-team">Students David Graham and Dominic Sciarrino · SME {{ team.sme }} · Technical advisor {{ team.advisor }}</p>
+        <nav aria-label="Modules">
+          <ul class="module-nav">
+            {% for item in modules %}
+              <li>
+                <a href="{{ url_for('learn', module_id=item.id) }}" {% if module is defined and module.id == item.id %}aria-current="page"{% endif %}>
+                  <span class="nav-num">{{ item.order }}</span>
+                  {{ item.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    {% if not tutor_ready %}
+      <p class="banner" role="status">
+        The AI tutor is off because no OpenAI key is loaded. Checkpoint quizzes still work. Copy <code>.env.example</code> to <code>.env</code> and set <code>OPENAI_API_KEY</code>.
+      </p>
+    {% endif %}
+
+    <main id="main">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <p>Teaching material, not clinical advice. Biology claims are drafts until {{ team.sme }} reviews them. Methods and app design sit with {{ team.advisor }}.</p>
+      <p>Built to be posted on GitHub as a Flask + Docker tutorial · MIT License</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,17 @@
+services:
+  tutorial:
+    build: .
+    ports:
+      - "${PORT:-5050}:5050"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      SECRET_KEY: ${SECRET_KEY:-change-me}
+      DATA_DIR: /data
+      PORT: "5050"
+    volumes:
+      - tutorial-progress:/data
+    restart: unless-stopped
+
+volumes:
+  tutorial-progress:

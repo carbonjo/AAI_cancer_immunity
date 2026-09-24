@@ -1,0 +1,22 @@
+<section class="widget" aria-labelledby="dogma-heading">
+  <h2 id="dogma-heading">Interactive figure: information flow</h2>
+  <p>Select a stage. The panel below the figure explains what information is copied, what is controlled, and what scRNA-seq later can see.</p>
+  <div class="dogma" role="group" aria-label="Central dogma stages">
+    <button type="button" class="dogma-node is-active" data-stage="dna" aria-pressed="true">DNA</button>
+    <span class="dogma-arrow" aria-hidden="true">→</span>
+    <button type="button" class="dogma-node" data-stage="transcription" aria-pressed="false">Transcription</button>
+    <span class="dogma-arrow" aria-hidden="true">→</span>
+    <button type="button" class="dogma-node" data-stage="rna" aria-pressed="false">RNA</button>
+    <span class="dogma-arrow" aria-hidden="true">→</span>
+    <button type="button" class="dogma-node" data-stage="translation" aria-pressed="false">Translation</button>
+    <span class="dogma-arrow" aria-hidden="true">→</span>
+    <button type="button" class="dogma-node" data-stage="protein" aria-pressed="false">Protein</button>
+  </div>
+  <div class="dogma-extra">
+    <button type="button" class="dogma-node" data-stage="signaling" aria-pressed="false">Signaling and transcription factors</button>
+  </div>
+  <div id="dogmaPanel" class="widget-panel" aria-live="polite">
+    <h3>DNA</h3>
+    <p>Stable sequence information in a clone. Mutations and copy-number changes are heritable. Most cell-state changes do not rewrite DNA.</p>
+  </div>
+</section>

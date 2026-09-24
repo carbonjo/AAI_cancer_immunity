@@ -1,0 +1,60 @@
+<section class="widget" aria-labelledby="heatmap-heading">
+  <h2 id="heatmap-heading">Interactive figure: a toy UMI count matrix</h2>
+  <p>
+    This teaching matrix is tiny and dense on purpose. Real droplet data are large and sparse.
+    Select a gene to highlight its row, or a cell to highlight its column. The caption under the
+    table interprets the pattern.
+  </p>
+  <div class="table-wrap">
+    <table class="heatmap" id="umiTable">
+      <caption>Toy UMI counts for seven genes across nine barcodes</caption>
+      <thead>
+        <tr>
+          <th scope="col">Gene</th>
+          <th scope="col"><button type="button" data-cell="0">E1</button></th>
+          <th scope="col"><button type="button" data-cell="1">E2</button></th>
+          <th scope="col"><button type="button" data-cell="2">E3</button></th>
+          <th scope="col"><button type="button" data-cell="3">T1</button></th>
+          <th scope="col"><button type="button" data-cell="4">T2</button></th>
+          <th scope="col"><button type="button" data-cell="5">T3</button></th>
+          <th scope="col"><button type="button" data-cell="6">B1</button></th>
+          <th scope="col"><button type="button" data-cell="7">M1</button></th>
+          <th scope="col"><button type="button" data-cell="8">X1</button></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-gene="EPCAM">
+          <th scope="row"><button type="button" data-gene="EPCAM">EPCAM</button></th>
+          <td>14</td><td>11</td><td>9</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>8</td>
+        </tr>
+        <tr data-gene="KRT8">
+          <th scope="row"><button type="button" data-gene="KRT8">KRT8</button></th>
+          <td>10</td><td>8</td><td>12</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>7</td>
+        </tr>
+        <tr data-gene="CD3D">
+          <th scope="row"><button type="button" data-gene="CD3D">CD3D</button></th>
+          <td>0</td><td>0</td><td>1</td><td>15</td><td>12</td><td>9</td><td>1</td><td>0</td><td>10</td>
+        </tr>
+        <tr data-gene="CD8A">
+          <th scope="row"><button type="button" data-gene="CD8A">CD8A</button></th>
+          <td>0</td><td>0</td><td>0</td><td>8</td><td>11</td><td>0</td><td>0</td><td>0</td><td>6</td>
+        </tr>
+        <tr data-gene="MS4A1">
+          <th scope="row"><button type="button" data-gene="MS4A1">MS4A1</button></th>
+          <td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>13</td><td>0</td><td>0</td>
+        </tr>
+        <tr data-gene="CD68">
+          <th scope="row"><button type="button" data-gene="CD68">CD68</button></th>
+          <td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>16</td><td>0</td>
+        </tr>
+        <tr data-gene="MKI67">
+          <th scope="row"><button type="button" data-gene="MKI67">MKI67</button></th>
+          <td>2</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>14</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p id="heatmapCaption" class="widget-panel" aria-live="polite">
+    Barcodes E1–E3 look epithelial (EPCAM, KRT8). T1–T2 look like CD8 T cells. T3 is T-lineage without CD8A (a CD4-like cartoon). B1 looks B-cell-like (MS4A1). M1 looks myeloid (CD68). X1 co-expresses epithelial and T-cell genes plus MKI67 — treat it as a doublet candidate, not a new cell type.
+  </p>
+</section>

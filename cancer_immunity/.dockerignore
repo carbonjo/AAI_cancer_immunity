@@ -1,0 +1,15 @@
+.git
+.gitignore
+.venv
+venv
+__pycache__
+*.pyc
+.env
+data
+notes
+docs
+.cursor
+.pytest_cache
+README.md
+LICENSE
+AGENTS.md

@@ -1,0 +1,18 @@
+<section class="widget" aria-labelledby="hallmarks-heading">
+  <h2 id="hallmarks-heading">Interactive figure: hallmarks as a map</h2>
+  <p>Select a hallmark. These are phenotype families from Hanahan and Weinberg (2011), not a ranked list of genes.</p>
+  <div class="card-grid" id="hallmarkGrid" role="group" aria-label="Hallmarks of cancer">
+    <button type="button" class="map-card is-active" data-hallmark="proliferation" aria-pressed="true">Sustaining proliferative signaling</button>
+    <button type="button" class="map-card" data-hallmark="suppressors" aria-pressed="false">Evading growth suppressors</button>
+    <button type="button" class="map-card" data-hallmark="death" aria-pressed="false">Resisting cell death</button>
+    <button type="button" class="map-card" data-hallmark="immortality" aria-pressed="false">Enabling replicative immortality</button>
+    <button type="button" class="map-card" data-hallmark="angiogenesis" aria-pressed="false">Inducing angiogenesis</button>
+    <button type="button" class="map-card" data-hallmark="invasion" aria-pressed="false">Invasion and metastasis</button>
+    <button type="button" class="map-card" data-hallmark="metabolism" aria-pressed="false">Reprogramming energy metabolism</button>
+    <button type="button" class="map-card" data-hallmark="immunity" aria-pressed="false">Avoiding immune destruction</button>
+  </div>
+  <div id="hallmarkPanel" class="widget-panel" aria-live="polite">
+    <h3>Sustaining proliferative signaling</h3>
+    <p>Clones keep mitogenic programs on — receptor tyrosine kinases, RAS, MYC, and others. In scRNA-seq this may look like a cycling or growth-factor program. That is state, not automatically a proven driver mutation.</p>
+  </div>
+</section>
