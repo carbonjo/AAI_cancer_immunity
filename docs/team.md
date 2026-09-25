@@ -16,7 +16,7 @@ Do not add people to this table without a named conversation.
 
 ## How work moves
 
-1. Students draft in `notes/` or in `content/lessons.py`.
+1. Students draft in `notes/` or in `tutorials/cancer_immunity/content/lessons.py`.
 2. Technical questions (app, Docker, git, data handling) go to Dr. Carbonara.
 3. Biological claims stay marked `needs-SME-review` until Dr. Krolewski comments.
 4. Meeting decisions are copied into `docs/meetings/` using [template.md](meetings/template.md).

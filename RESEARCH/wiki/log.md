@@ -1,5 +1,9 @@
 # Directory Update Log
 
+## 2026-09-25
+
+* **Decision**: [Three-layer layout](decisions/three-layer-layout.md) — group (`docs/`, `notes/`, `references/`), tutorials (`tutorials/cancer_immunity/` and future siblings), research (`RESEARCH/`). Duplicate root GeoTyper PDF removed; canonical PDF remains `raw/papers/2205.01187v1.pdf`.
+
 ## 2026-09-24
 
 * **Ingest (batch)**: five `raw/` sources — `team.md`, `learning-goals.md`, `starter-reading.md`, `karpathy-llm-wiki.md`, `papers/2205.01187v1.pdf`. Deepened existing people/concepts/claims/methods; added starter-list papers Alberts, Luecken & Theis 2019, Hanahan 2022, Sharma & Allison 2015; compiled GeoTyper from the PDF ([paper](papers/wolfe-2022-geotyper.md), [method](methods/geotyper.md), [marker-ambiguity](claims/geotyper-marker-ambiguity.md), [label-disagreement](claims/geotyper-label-disagreement.md)); added [needs-sme-review](claims/needs-sme-review.md), [do-not-silently-fix-tutorial](claims/do-not-silently-fix-tutorial.md), [no-phi-in-git](decisions/no-phi-in-git.md), [scrna-failure-modes](concepts/scrna-failure-modes.md), [time-hot-cold](concepts/time-hot-cold.md). All pages remain `draft` and unverified.

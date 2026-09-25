@@ -13,6 +13,8 @@ Standard: [OKF v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/bl
 
 This is **compiled research memory**, not RAG. Read [`wiki/index.md`](wiki/index.md) first. Biology stays `status: draft` until [Dr. John Krolewski](wiki/people/john-krolewski.md) marks `verified.by: human:…`.
 
+This folder is the **research layer** of the parent GitHub repo. Meetings stay in `docs/meetings/`. Teaching apps stay in `tutorials/`.
+
 ## Daily use
 
 **Ingest** one source at a time: drop it in `raw/`, then ask the agent to ingest.  

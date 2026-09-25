@@ -10,9 +10,13 @@ description: >-
 
 # AAI cancer immunity
 
-This folder is a **student research workspace** plus a **public interactive tutorial**.
-The tutorial teaches four linked topics. Research notes capture what the team actually
-decides. Do not mix the two: tutorial prose is teaching material; `notes/` is work product.
+This folder has three layers. Do not mix them:
+
+1. **Group** (`docs/`, `notes/`, `references/`) — meetings, roster, student drafts.
+2. **Tutorials** (`tutorials/`) — teaching apps; current app is `tutorials/cancer_immunity/`.
+3. **Research** (`RESEARCH/`) — Karpathy LLM-wiki / OKF compiled memory. This is where research happens.
+
+Tutorial prose is teaching material. `notes/` is work product. `RESEARCH/wiki/` is compiled claims.
 
 ## People (do not invent titles)
 
@@ -31,7 +35,7 @@ Details: [people.md](people.md). Topic map: [topics.md](topics.md).
 
 | Need | File |
 | --- | --- |
-| Public repo story, how to run the app | `cancer_immunity/README.md` |
+| Public repo story, how to run the app | `tutorials/cancer_immunity/README.md` |
 | Agent constraints | `AGENTS.md` |
 | Team and working agreements | `docs/team.md` |
 | Why the four topics are sequenced this way | `docs/learning-goals.md` |
@@ -40,8 +44,8 @@ Details: [people.md](people.md). Topic map: [topics.md](topics.md).
 | Compiled research wiki (OKF / LLM-wiki) | `RESEARCH/wiki/index.md` |
 | Wiki schema (ingest / query / lint) | `RESEARCH/AGENTS.md` |
 | Landmark readings | `references/starter-reading.md` |
-| Lesson and quiz content | `cancer_immunity/content/lessons.py` |
-| App routes and OpenAI tutor | `cancer_immunity/app.py` |
+| Lesson and quiz content | `tutorials/cancer_immunity/content/lessons.py` |
+| App routes and OpenAI tutor | `tutorials/cancer_immunity/app.py` |
 
 Do not dump these files into chat. Cite paths and change the files.
 
@@ -78,20 +82,20 @@ Task progress:
 
 ## Tutorial engineering
 
-The GitHub artifact is the nested repo **`cancer_immunity/`**: a **Flask** app in **Docker** that uses an **OpenAI** key for the tutor.
+The teaching app is **`tutorials/cancer_immunity/`**: a **Flask** app in **Docker** that uses an **OpenAI** key for the tutor. The shared GitHub for the four-person team is this parent repo.
 
 | Piece | Where |
 | --- | --- |
-| Lessons / quizzes | `cancer_immunity/content/lessons.py` |
-| Tutor system prompt | `cancer_immunity/content/tutor.py` |
-| Routes | `cancer_immunity/app.py` |
-| Accessible UI | `cancer_immunity/templates/`, `cancer_immunity/static/` |
-| Run locally | `cd cancer_immunity && docker compose up --build` |
-| Secrets | `cancer_immunity/.env` from `.env.example` — never commit |
+| Lessons / quizzes | `tutorials/cancer_immunity/content/lessons.py` |
+| Tutor system prompt | `tutorials/cancer_immunity/content/tutor.py` |
+| Routes | `tutorials/cancer_immunity/app.py` |
+| Accessible UI | `tutorials/cancer_immunity/templates/`, `tutorials/cancer_immunity/static/` |
+| Run locally | `cd tutorials/cancer_immunity && docker compose up --build` |
+| Secrets | `tutorials/cancer_immunity/.env` from `.env.example` — never commit |
 
 **When editing the app**
 
-1. Change lesson text in `cancer_immunity/content/lessons.py`, not by hard-coding paragraphs in templates.
+1. Change lesson text in `tutorials/cancer_immunity/content/lessons.py`, not by hard-coding paragraphs in templates.
 2. Keep quizzes gradable **without** an API key. The tutor is optional.
 3. Follow WCAG 2.1 AA / Ally HTML: `lang="en"`, one `h1`, no heading skips, data tables with `<th scope="col">` and captions, underlined links, contrast on `#1a1a1a` / `#ffffff`, visible `:focus`.
 4. Do not put the OpenAI key in client JavaScript, images, or README examples.

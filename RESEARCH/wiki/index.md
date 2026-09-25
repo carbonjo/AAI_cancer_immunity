@@ -63,3 +63,4 @@ OKF v0.2 bundle. Read this file first at query time. All concept pages are `stat
 
 * [Knowledge base lives in RESEARCH/](decisions/kb-lives-in-research.md) - This folder is the compiled OKF wiki for AAI cancer immunity. Dated 2026-09-24.
 * [No PHI or keys in git](decisions/no-phi-in-git.md) - Public teaching content only. No PHI, identifiable patients, unpublished matrices, or OpenAI keys in the tree.
+* [Three-layer layout for the shared GitHub repo](decisions/three-layer-layout.md) - Group ops, tutorials, and RESEARCH stay separate. Dated 2026-09-25.

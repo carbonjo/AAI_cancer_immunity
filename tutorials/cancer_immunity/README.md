@@ -2,9 +2,11 @@
 
 Interactive tutorial for **information flow in the cell**, **single-cell RNA sequencing**, **cancer cell biology**, and **cancer immunity**.
 
-Built to be posted on GitHub. Run it with **Flask**, **Docker**, and an **OpenAI** API key.
+This folder lives in the team workspace as `tutorials/cancer_immunity/`. Shared GitHub for the four of you: https://github.com/carbonjo/AAI_cancer_immunity
 
-**Repository:** https://github.com/carbonjo/cancer_immunity
+Public product copy (optional): https://github.com/carbonjo/cancer_immunity
+
+Built to run with **Flask**, **Docker**, and an **OpenAI** API key.
 
 ## People
 
